@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Actividad Integradora Flutter',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor:const Color(0xFF24B8E7)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF24B8E7)),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Pantalla Principal'),
@@ -39,11 +39,29 @@ class _MyHomePageState extends State<MyHomePage> {
           style: const TextStyle(color: Colors.white),
         ),
       ),
-      body: const Center(
-        child: Text(
-          '¡Hola!\nActividad Integradora 1',
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              '¡Hola!\nActividad Integradora 1',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 24),
+            ElevatedButton.icon(
+              icon: const Icon(Icons.notifications),
+              label: const Text('Mostrar SnackBar'),
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('¡SnackBar funcionando correctamente!'),
+                    duration: Duration(seconds: 2),
+                  ),
+                );
+              },
+            ),
+          ],
         ),
       ),
     );
