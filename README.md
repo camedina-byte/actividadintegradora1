@@ -1,17 +1,22 @@
-# actividad_flutter
+# Actividad Integradora I - Flutter
 
-A new Flutter project.
+## Descripción
+Aplicación desarrollada en flutter como parte de la 
+Actividad integradora I del curso de desarrollo de aplicaciones móviles - ECOTEC.
 
-## Getting Started
+Incluye:
+- Modificaciones de UI (título, texto, color de AppBar)
+- Botón funcional con SnackBar
+- Navegación entre pantallas (Navigator.push / Navigator.pop)
 
-This project is a starting point for a Flutter application.
+## Captura
 
-A few resources to get you started if this is your first Flutter project:
+### Revisiones previas
+![Flutter Doctor](screenshots/flutter_doctor.png)
+![Flutter Devices](screenshots/flutter_devices.png)
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### App
+![App Inicial](screenshots/app_inicial.png)
+![Pantalla Principal](screenshots/pantalla_principal.png)
+![SnackBar](screenshots/snackbar.png)
+![Segunda Pantalla](screenshots/segunda_pantalla.png)
