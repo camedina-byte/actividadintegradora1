@@ -61,6 +61,63 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
             ),
+            const SizedBox(height: 16),
+            ElevatedButton.icon(
+              icon: const Icon(Icons.arrow_forward),
+              label: const Text('Ir a Segunda Pantalla'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF0A5CA5),
+                foregroundColor: Colors.white,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SegundaPantalla(),
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class SegundaPantalla extends StatelessWidget {
+  const SegundaPantalla({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF0A5CA5),
+        title: const Text(
+          'Segunda Pantalla',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              'Bienvenido a la segunda pantalla',
+              style: TextStyle(fontSize: 18),
+            ),
+            const SizedBox(height: 24),
+            ElevatedButton.icon(
+              icon: const Icon(Icons.arrow_back),
+              label: const Text('Regresar'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF0A5CA5),
+                foregroundColor: Colors.white,
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
           ],
         ),
       ),
